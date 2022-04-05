@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/drawable/selector_agree_check.xml" value="0.1485" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_map.xml" value="0.32472826086956524" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment.xml" value="0.33" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_history.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_request.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_success.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_upload_prescription.xml" value="0.3428442028985507" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_agree_noti.xml" value="0.2328125" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_exit.xml" value="0.17603850050658562" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_login.xml" value="0.17603850050658562" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_logout.xml" value="0.17603850050658562" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_map_exit.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_not_agreei.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_ok.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_payment.xml" value="0.33" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_select_photo.xml" value="0.3428442028985507" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/item_payment_history.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/item_payment_request.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/layout/progress_loading.xml" value="0.3619791666666667" />
+        <entry key="..\:/mproject/hana/pharmacy-master/pharmacy-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2155" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_lefttop_righttop_round15.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round10_2_stroek_eeeeee.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_15.xml" value="0.111" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_22.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_34.xml" value="0.1215" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_5.xml" value="0.154" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_58_5.xml" value="0.111" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_round_8.xml" value="0.111" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/background_stroke_eee.xml" value="0.111" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/height_dot_line.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/ic_round_chevron_left_24.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/ic_round_keyboard_arrow_right_24.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/selector_agree_check.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/drawable/under_dot_line.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_map.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_history.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_request.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_payment_success.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_sendimage_kinds.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/activity_upload_prescription.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/custom_barcode_scanner.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_account.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_agree_noti.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_exit.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_login.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_logout.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_map_exit.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_not_agreei.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_ok.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_payment.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/dialog_select_photo.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/item_payment_history.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/item_payment_request.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/layout/progress_loading.xml" value="0.2604166666666667" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1555" />
+        <entry key="..\:/mproject/jupharm/pharmacy-master/pharmacy-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1555" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16751269035532995" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_payment.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/item_payment_request.xml" value="0.2810792349726776" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

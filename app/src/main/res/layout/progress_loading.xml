@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_loading" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:text="사진 전송중 입니다."
+            android:textColor="@color/white"
+            android:textSize="21dp" />
+
+    </LinearLayout>
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:id="@+id/lottie_loading"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_loop="true"-->
+<!--        app:lottie_speed="1.5"-->
+<!--        app:lottie_fileName="loading_madicine.json"-->
+<!--        app:lottie_cacheComposition="true"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+</RelativeLayout>

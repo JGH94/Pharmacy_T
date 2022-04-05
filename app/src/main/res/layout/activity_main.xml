@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.main.MainViewModel" />
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.main.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/gray_e9"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/background_header"
+                app:layout_constraintBottom_toBottomOf="@+id/clLogin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/optionBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/ic_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> activity.showExitDialog()}"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="30dp"
+                android:id="@+id/clLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="23dp"
+                android:paddingTop="27dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/llName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotfr"
+                        android:text="@{vm.liveName}"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:layout_marginBottom="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotfr"
+                        android:text="@string/hello_login"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/listname_2"
+                    app:layout_constraintTop_toBottomOf="@id/llName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="@string/welcome"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/listname_3"
+                    app:layout_constraintTop_toBottomOf="@id/listname_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/last_Date"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="마지막 접수 : "
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+                    <TextView
+                        android:id="@+id/last_Date_2"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="@{vm._iNDATE}"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView2"
+                android:layout_marginTop="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clLogin"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:background="@drawable/background_round_5"
+                        android:backgroundTint="@color/gray_e9_60"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingBottom="13dp"
+                        android:src="@drawable/logo"
+                        />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="10dp"
+                        android:onClick="@{() -> activity.onShowCamera()}"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:id="@+id/iv_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="84dp"
+                                android:src="@drawable/ic_sned_image" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nanumsquareotfeb"
+                                android:gravity="center"
+                                android:text="사진 전송"
+                                android:textColor="@color/black_900"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/QRSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="10dp"
+                        android:onClick="@{() -> activity.ShowQR()}"
+                        app:cardElevation="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:id="@+id/QR_iv_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="59dp"
+                                android:src="@drawable/ic_payment" />
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/gray_c4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:gravity="center"
+                                android:text="QR 전송"
+                                android:textColor="@color/black_900"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardPayList"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="10dp"
+                        android:onClick="@{() -> activity.onPaymentList()}"
+                        app:cardElevation="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:id="@+id/iv_image3"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_paylist" />
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/gray_c4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:gravity="center"
+                                android:text="전송 내역"
+                                android:textColor="@color/black_900"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:elevation="10dp"
+                        android:onClick="@{() -> activity.onShowCall()}"
+                        app:cardElevation="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+                            <ImageView
+                                android:id="@+id/iv_image4"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_call" />
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="35dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/gray_c4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:gravity="center"
+                                android:text="전화"
+                                android:textColor="@color/black_900"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/nanumsquareotfeb"
+                            android:text="약국정보"
+                            android:textColor="@color/black_900"
+                            android:textSize="15dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:text="사업장 : 주차편한약국"
+                                android:textColor="@color/black_900"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:text="대표자명 : 이수정"
+                                android:textColor="@color/black_900"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:onClick="@{() -> activity.copyAccount()}"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/nanumsquareotfb"
+                                android:text="계좌번호 : "
+                                android:textColor="@color/black_900"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tvAccountBank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/nanumsquareotfr"
+                                android:text=" 371-910557-21107 (하나은행)"
+                                android:textColor="@color/black_900"
+                                android:textSize="15dp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+
+            <LinearLayout
+                android:id="@+id/showHome_"
+                android:onClick="@{() -> activity.showHome()}"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ic_home_"
+                    android:src="@drawable/ic_home"
+                    android:background="@drawable/background_round_34"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/showMap_"
+                android:onClick="@{() -> activity.showMap()}"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/ic_map"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/showChat_"
+                android:onClick="@{() -> activity.showChat()}"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/ic_chat"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/showMypage_"
+                android:onClick="@{() -> activity.showMypage()}"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/showMypage_image"
+                    android:src="@drawable/ic_mypage_menu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</layout>

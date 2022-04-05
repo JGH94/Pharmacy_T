@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.login.LoginViewModel"/>
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.login.LoginActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/background_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray_f1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="32.5dp"
+                        android:src="@drawable/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="28dp"
+                        android:textColor="@color/black_900"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="회원가입"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:hint="이름 입력"
+                        android:inputType="text"
+                        android:paddingLeft="16dp"
+                        android:text="@={vm.liveName}"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanumsquareotfr"
+                        android:textColor="@color/black_900"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/background_round_34"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"/>
+
+                    <EditText
+                        android:hint="휴대전화 번호"
+                        android:paddingLeft="16dp"
+                        android:inputType="number"
+                        android:text="@={vm.livePhone}"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/nanumsquareotfr"
+                        android:textColor="@color/black_900"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/background_round_34"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"/>
+
+                    <TextView
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/background_round_58_5"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="19dp"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="약관 동의"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/Allcheck"
+                            android:onClick="@{(v) -> activity.onShowAgree(v)}"
+                            android:tag="5"
+                            android:background="@drawable/ic_check_off"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="@color/black_900"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="약관의 내용을 이해하였고 전체 동의합니다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:background="@drawable/ic_1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="프로그램 서비스 이용약관"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:padding="8dp"
+                            android:background="@color/white"
+                            android:text="@string/program_agree"
+                            android:textColor="@color/black_900"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/check1"
+                            android:onClick="@{(v) -> activity.onShowAgree(v)}"
+                            android:tag="1"
+                            android:background="@drawable/ic_check_off"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="약관의 내용을 이해하였고 모두 동의합니다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:background="@drawable/ic_2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="개인정보 수집 및 활용동의"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:padding="8dp"
+                            android:background="@color/white"
+                            android:text="@string/user_info_agree"
+                            android:textColor="@color/black_900"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/check2"
+                            android:tag="2"
+                            android:onClick="@{(v) -> activity.onShowAgree(v)}"
+                            android:background="@drawable/ic_check_off"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="약관의 내용을 이해하였고 모두 동의합니다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:background="@drawable/ic_3"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="사진촬영 주의사항"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:padding="8dp"
+                            android:background="@color/white"
+                            android:text="@string/camera_agree"
+                            android:textColor="@color/black_900"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                    <LinearLayout
+                        android:layout_marginBottom="24dp"
+                        android:gravity="center|left"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/check3"
+                            android:tag="3"
+                            android:onClick="@{(v) -> activity.onShowAgree(v)}"
+                            android:background="@drawable/ic_check_off"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
+
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="약관의 내용을 이해하였고 모두 동의합니다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:onClick="@{() -> activity.showExitDialog()}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:text="취소"
+                    android:fontFamily="@font/nanumsquareotfeb"
+                    android:layout_width="117dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:onClick="@{() -> vm.onLogin()}"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:background="@color/point1000"
+                    android:textColor="@color/white"
+                    android:text="확인"
+                    android:fontFamily="@font/nanumsquareotfeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

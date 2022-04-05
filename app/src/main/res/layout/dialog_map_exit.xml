@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.map.MapActivity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="28dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="45dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/black_900"
+                    android:text="홈으로 돌아가시겠습니까?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:onClick="@{() -> activity.onExitClose()}"
+                    android:background="@color/point1000"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:gravity="center"
+                    android:text="아니오"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:onClick="@{() -> activity.onFinish()}"
+                    android:background="@color/white"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:gravity="center"
+                    android:text="예"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

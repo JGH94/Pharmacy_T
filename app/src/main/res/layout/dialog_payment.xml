@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.login.LoginActivity" />
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.login.LoginViewModel" />
+        <variable
+            name="time"
+            type="String" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="34dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="28dp"
+            android:background="@color/point1000_90"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="42dp"
+                android:paddingRight="42dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="25.5dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="부가서비스 이용료결제"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="약국 안마 의자 사용료"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="1000원"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="@string/usingprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginBottom="25dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="결제하시겠습니까?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/PriceNoBtn"
+                    android:background="@color/point1000"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:gravity="center"
+                    android:text="아니오"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+
+                    android:id="@+id/PriceYesBtn"
+                    android:background="@color/white"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:gravity="center"
+                    android:text="예"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="22dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

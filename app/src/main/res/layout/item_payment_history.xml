@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.payment.list.PaymentHistoryViewModel" />
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="30dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="@{vm.history.data.get(position).payId}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="24dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center|top"
+                    android:text="@{vm.history.data.get(position).payOK}"
+                    stateColor="@{vm.history.data.get(position).payOK}"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="8dp"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:textColor="@color/black_900"
+                        dateFormat="@{vm.history.data.get(position).payIndate}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="4dp"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/nanumsquareotfr"
+                        textWon="@{vm.history.data.get(position).payPrice}"
+                        stateColor="@{vm.history.data.get(position).payOK}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:fontFamily="@font/nanumsquareotfr"
+                        android:layout_marginTop="4dp"
+                        android:textSize="8dp"
+                        android:textColor="@color/black_900"
+                        textEmptyCheck="@{vm.history.data.get(position).payType}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        isTempData="@{vm.history.data.get(position).accountHolder}"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="예금주 - "
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            textEmptyCheck="@{vm.history.data.get(position).accountHolder}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{vm.history.data.get(position).bankName}"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="은행 - "
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            textEmptyCheck="@{vm.history.data.get(position).bankName}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{vm.history.data.get(position).account}"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="계좌 - "
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            textEmptyCheck="@{vm.history.data.get(position).account}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{vm.history.data.get(position).reason}"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="취소 사유 - "
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/black_900"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:layout_marginTop="4dp"
+                            android:textSize="9dp"
+                            textEmptyCheck="@{vm.history.data.get(position).reason}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</layout>

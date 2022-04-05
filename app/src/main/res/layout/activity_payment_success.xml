@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.payment.success.PaymentSuccessViewModel" />
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.payment.success.PaymentSuccessActivity" />
+        <variable
+            name="item"
+            type="com.jucha.pharmacy.model.ResponseBootpayDone" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:background="@color/point1000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_stroke_eee"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="48dp"
+                    android:src="@drawable/ic_success" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:text="결제가 완료되었습니다."
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nanumsquareotfb"
+                    android:text="결제정보"
+                    android:textColor="@color/black_900"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/colorLightGray" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:text="가맹점"
+                        android:textColor="@color/black_900"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:text="@string/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:textColor="@color/black_900"
+                        android:textSize="11dp"
+                        tools:text="OO약국" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="결제금액"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:textColor="@color/black_900"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotfb"
+                        android:textColor="@color/black_900"
+                        android:textSize="11dp"
+                        textWon="@{String.valueOf(item.price)}"
+                        tools:text="100,000원" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/colorLightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        isTempData="@{item.purchased_at}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="결제 일시"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"  />
+
+                        <TextView
+                            android:text="@{item.purchased_at}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="2021-04-01 17:41:11" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.card_name}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="카드명"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:text="@{item.card_name}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="100,000원" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.card_no}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="카드번호"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            textCardNum="@{item.card_no}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="100,000원" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        isTempData="@{item.account}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="가상계좌"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:text="@{item.account}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="28930204302222" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.bankname}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="은행"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:text="@{item.bankname}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="국민은행" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.accounthodler}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="예금주"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:text="@{item.accounthodler}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="OO약국" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.bankname}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="금액"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"  />
+
+                        <TextView
+                            textWon="@{String.valueOf(item.price)}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="100,000원" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        isTempData="@{item.expiredate}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:text="마감일"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:text="@{item.expiredate}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumsquareotfb"
+                            android:textColor="@color/black_900"
+                            android:textSize="11dp"
+                            tools:text="2021년 0년 15일 10시 21분 까지" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:onClick="@{() -> activity.showMainActivity()}"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_round_8"
+                android:backgroundTint="@color/point1000"
+                android:gravity="center"
+                android:paddingTop="22dp"
+                android:paddingBottom="22dp"
+                android:text="확인"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanumsquareotfr"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</layout>

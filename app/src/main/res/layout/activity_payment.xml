@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.jucha.pharmacy.ui.payment.PaymentViewModel" />
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.payment.PaymentActivity" />
+        <variable
+            name="item"
+            type="com.jucha.pharmacy.model.payrequest.ResponsePayRequestItem" />
+    </data>
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparency"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/ll_exit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:ignore="Orientation"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/background_lefttop_righttop_round15">
+
+            <ImageView
+                android:layout_marginLeft="35dp"
+                android:onClick="@{() -> activity.onFinish()}"
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_exit"
+                android:layout_width="30dp"
+                android:layout_height="29dp"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanumsquareotfr"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:text="결제금액"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nanumsquareotfr"
+                android:textSize="37dp"
+                android:textColor="@color/point1000"
+                tools:text="18,000원"
+                textWon="@{item.pay_Price}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    select="@{vm.livePayType}"
+                    android:onClick="@{() -> vm.onSelectCard()}"
+                    android:layout_marginRight="3dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/selector_67d5b5_eeeeee"
+                    android:background="@drawable/background_round_8"
+                    android:textColor="@color/selector_ffffff_000000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="신용카드"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    select="@{vm.livePayType}"
+                    android:onClick="@{() -> vm.onSelectVBank()}"
+                    android:layout_marginLeft="3dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/selector_67d5b5_eeeeee"
+                    android:background="@drawable/background_round_8"
+                    android:textColor="@color/selector_ffffff_000000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="무통장입금"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    select="@{vm.livePayType}"
+                    android:onClick="@{() -> vm.onSelectBank()}"
+                    android:layout_marginRight="3dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/selector_67d5b5_eeeeee"
+                    android:background="@drawable/background_round_8"
+                    android:textColor="@color/selector_ffffff_000000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="실시간 계좌이체"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    select="@{vm.livePayType}"
+                    android:onClick="@{() -> vm.onSelectDirect()}"
+                    android:layout_marginLeft="3dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/selector_67d5b5_eeeeee"
+                    android:background="@drawable/background_round_8"
+                    android:textColor="@color/selector_ffffff_000000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="직접 송금"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:text="상호명 : 하나약국"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:text="대표자 : 최홍석"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:text="사업자번호 : 442-07-00877 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:text="주소 : 울산광역시 동구 바드래1길 46,108동 지1층 101호(전하동) "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:text="전화번호 :  052-236-7004"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:onClick="@{() -> activity.onPaymentSuccess(vm.livePayType)}"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/point1000"
+                    android:background="@drawable/background_round_8"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    textWonPayment="@{item.pay_Price}"
+                    tools:text="18,888원 결제"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:onClick="@{() -> activity.onSitePayment()}"
+                    android:layout_weight="2"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:backgroundTint="@color/selector_67d5b5_eeeeee"
+                    android:background="@drawable/background_round_8"
+                    android:textColor="@color/selector_ffffff_000000"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/nanumsquareotfr"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="현장 결제"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

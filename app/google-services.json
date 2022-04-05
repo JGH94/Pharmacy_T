@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "817921931432",
+    "project_id": "pharmacy-2720e",
+    "storage_bucket": "pharmacy-2720e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817921931432:android:2359b0a75bcbea3304ea9d",
+        "android_client_info": {
+          "package_name": "com.jucha.pharmacy.aaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817921931432-7f75tr7mplcqnr84f68mbcntbav350nj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jucha.pharmacy.aaa",
+            "certificate_hash": "45a5dbf3fd1435e5eccf57f7c7568f7c17cbad12"
+          }
+        },
+        {
+          "client_id": "817921931432-sv76h5bqqrg2gj0n3ivqmq75k35fu5c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwAQfLlfAmwoSXld-rcV-pqEvgMZliMzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817921931432-sv76h5bqqrg2gj0n3ivqmq75k35fu5c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

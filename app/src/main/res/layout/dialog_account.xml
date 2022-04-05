@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.payment.PaymentActivity" />
+        <variable
+            name="data"
+            type="com.jucha.pharmacy.model.ResponseAccountInfoItem" />
+        <variable
+            name="text"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:paddingTop="28dp"
+        android:paddingBottom="28dp"
+        android:paddingLeft="42dp"
+        android:paddingRight="42dp"
+        android:background="@drawable/background_round_34"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="25.5dp"
+            android:fontFamily="@font/nanumsquareotfr"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:text="알림"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nanumsquareotfr"
+            android:text="@{text}"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:onClick="@{() -> activity.onClose()}"
+            android:layout_marginTop="17.5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:background="@drawable/background_round_58_5"
+            android:fontFamily="@font/nanumsquareotfb"
+            android:textSize="22dp"
+            android:textColor="@color/white"
+            android:text="확인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>

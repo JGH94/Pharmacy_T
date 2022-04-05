@@ -1,0 +1,1 @@
+/Users/lakue/Downloads/platform-tools/adb

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.jucha.pharmacy.ui.main.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginRight="8dp"
+            android:onClick="@{() -> activity.onShowCamera()}"
+            android:background="@drawable/background_round_15"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:src="@drawable/icon_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.Pharmacy.Headline"
+                android:text="사진촬영"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/background_round_15"
+            android:onClick="@{() -> activity.onShowCameraAlbum()}"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:src="@drawable/icon_album"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.Pharmacy.Headline"
+                android:text="앨범"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
